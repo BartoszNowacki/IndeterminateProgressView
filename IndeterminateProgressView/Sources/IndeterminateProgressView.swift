@@ -31,8 +31,6 @@ import UIKit
         }
     }
     private let indeterminateLine: UIView = UIView()
-    private var indeterminateLineWidthConstraint: NSLayoutConstraint?
-    private var indeterminateLineLeadingConstraint: NSLayoutConstraint?
     
     private var isAnimationOn: Bool = false
     
@@ -66,7 +64,6 @@ import UIKit
     }
     
     private func animateIndeterminateFirstStage() {
-        isAnimationOn = self.window != nil
         indeterminateLine.frame = CGRect(x: 0, y: 0, width: 0, height: self.frame.height)
         UIView.animate(withDuration: 1.5, delay: 0, options: [.curveLinear], animations: {
             self.indeterminateLine.frame = CGRect(x: self.frame.width, y: 0, width: self.frame.width, height: self.frame.height)
