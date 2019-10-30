@@ -11,13 +11,13 @@ import UIKit
 @IBDesignable open class IndeterminateProgressView: UIProgressView {
     
     /// This type tells Progress View to work as indeterminate Progress View (it works similar to Android Indeterminate ProgressView), or determinate (which is the normal UIProgressView)
-    enum ProgressType: String {
+    public enum ProgressType: String {
         case determinate = "determinate"
         case indeterminate = "indeterminate"
     }
-    var type = ProgressType.determinate
+    open var type = ProgressType.determinate
     @available(*, unavailable, message: "This property is reserved for Interface Builder. Use 'type' instead.")
-    @IBInspectable var progressType: String? {
+    @IBInspectable open var progressType: String? {
         willSet {
             if let newType = ProgressType(rawValue: newValue?.lowercased() ?? "") {
                 type = newType
