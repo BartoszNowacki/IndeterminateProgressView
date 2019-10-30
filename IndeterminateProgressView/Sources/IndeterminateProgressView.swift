@@ -60,6 +60,7 @@ import UIKit
         self.addSubview(indeterminateLine)
         indeterminateLine.backgroundColor = progressTintColor
         indeterminateLine.clipsToBounds = true
+        self.clipsToBounds = true
         indeterminateLine.frame = CGRect(x: 0, y: 0, width: 0, height: self.frame.height)
     }
     
