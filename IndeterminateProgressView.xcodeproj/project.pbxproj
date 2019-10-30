@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		A22AAA752369870800DA3874 /* IndeterminateProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = A22AAA732369870800DA3874 /* IndeterminateProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A22AAA7D236988E200DA3874 /* IndeterminateProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22AAA7C236988E200DA3874 /* IndeterminateProgressView.swift */; };
+		A22AAA7E2369897F00DA3874 /* IndeterminateProgressView.swift in Headers */ = {isa = PBXBuildFile; fileRef = A22AAA7C236988E200DA3874 /* IndeterminateProgressView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A22AAA702369870800DA3874 /* IndeterminateProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IndeterminateProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A22AAA732369870800DA3874 /* IndeterminateProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IndeterminateProgressView.h; sourceTree = "<group>"; };
 		A22AAA742369870800DA3874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A22AAA7C236988E200DA3874 /* IndeterminateProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndeterminateProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +49,19 @@
 		A22AAA722369870800DA3874 /* IndeterminateProgressView */ = {
 			isa = PBXGroup;
 			children = (
+				A22AAA7B236988C400DA3874 /* Sources */,
 				A22AAA732369870800DA3874 /* IndeterminateProgressView.h */,
 				A22AAA742369870800DA3874 /* Info.plist */,
 			);
 			path = IndeterminateProgressView;
+			sourceTree = "<group>";
+		};
+		A22AAA7B236988C400DA3874 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A22AAA7C236988E200DA3874 /* IndeterminateProgressView.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A22AAA752369870800DA3874 /* IndeterminateProgressView.h in Headers */,
+				A22AAA7E2369897F00DA3874 /* IndeterminateProgressView.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +108,7 @@
 				TargetAttributes = {
 					A22AAA6F2369870800DA3874 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -131,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A22AAA7D236988E200DA3874 /* IndeterminateProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +275,7 @@
 		A22AAA792369870800DA3874 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = B48UT365VC;
@@ -277,6 +293,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = BartoszNowacki.IndeterminateProgressView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -285,6 +302,7 @@
 		A22AAA7A2369870800DA3874 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = B48UT365VC;
