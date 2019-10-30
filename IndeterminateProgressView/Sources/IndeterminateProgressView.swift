@@ -15,7 +15,13 @@ import UIKit
         case determinate = "determinate"
         case indeterminate = "indeterminate"
     }
-    open var type = ProgressType.determinate
+    open var type = ProgressType.determinate {
+        didSet {
+            if type == ProgressType.determinate {
+                stopIndeterminateProgress()
+            }
+        }
+    }
     @available(*, unavailable, message: "This property is reserved for Interface Builder. Use 'type' instead.")
     @IBInspectable open var progressType: String? {
         willSet {
