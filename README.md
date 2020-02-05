@@ -19,7 +19,7 @@ github "BartoszNowacki/IndeterminateProgressView"
 ```
 
 ## Usage
-**IndeterminateProgressView** have two states in which he can work: determinate and indeterminate. In determinate state progress view works as normal UIProgressView. In indetermianate state it works as Android like Progress View with indeterminate progress. Before you will use indeterminate progress view, you have to set indeterminate state. 
+**IndeterminateProgressView** have two states in which it can work: determinate and indeterminate. In determinate state, progress view works as normal UIProgressView. In indetermianate state it works as Android like Progress View with indeterminate progress. Before you will use indeterminate progress view, you have to set indeterminate state. 
 
 There are 2 ways to configure that:
 
@@ -48,4 +48,4 @@ DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
 }
 ```
 
-*Please note* that if you want to start of the progressView indeterminate animation, you should put startIndeterminateProgress() function in viewWillAppear.
+*Please note* that if you want to start the progressView indeterminate animation as soon as view will appear, you should put startIndeterminateProgress() function in viewWillAppear.
