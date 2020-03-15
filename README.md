@@ -7,23 +7,23 @@
 
 ## Description
 
-**IndeterminateProgressView** is extended UIProgressView, which have functionality of indeterminate progress, like in Android Progress View.
+**IndeterminateProgressView** extends UIProgressView to replicate Android’s Progress View indeterminate progress mode.
 
 ## Installation
 
 **IndeterminateProgressView** is available through [Carthage](https://github.com/Carthage/Carthage).
-To install just write into your Cartfile:
+To install add to your Cartfile:
 
 ```ruby
 github "BartoszNowacki/IndeterminateProgressView"
 ```
 
 ## Usage
-**IndeterminateProgressView** have two states in which it can work: determinate and indeterminate. In determinate state, progress view works as normal UIProgressView. In indetermianate state it works as Android like Progress View with indeterminate progress. Before you will use indeterminate progress view, you have to set indeterminate state. 
+**IndeterminateProgressView** works in two modes:
+* Determinatee - works as normal UIProgressView
+* Indetermianate - works similarly to Android’s Progress View with indeterminate progress mode. To use indeterminate progress view, indeterminate state has to be set:
 
-There are 2 ways to configure that:
-
-1. In storyboard - Fill Progress Type filed with "indeterminate" (or "determinate") text.
+1. In storyboard - Fill Progress Type field with "indeterminate" (or "determinate") text.
 
 2. In code:
 ```swift
@@ -34,9 +34,9 @@ There are 2 ways to configure that:
     }
 ```
 
-*Please note* that changing the type from indeterminate to determinate while animation is active it will stop the animation.
+*Please note* that changing the type from indeterminate to determinate while animation is active will stop the animation.
 
-If type of your progressView is indeterminate, then you can call function to start progress animation. Use startIndeterminateProgress() and stopIndeterminateProgress() to start and stop your progress animation. 
+You can start/stop progress animation with startIndeterminateProgerss() / stopIndeterminateProgress() (in indeterminate mode).
 
 Example:
 
@@ -48,4 +48,4 @@ DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
 }
 ```
 
-*Please note* that if you want to start the progressView indeterminate animation as soon as view will appear, you should put startIndeterminateProgress() function in viewWillAppear.
+*Please note* to start the progressView indeterminate animation as soon as view will appear, you should put startIndeterminateProgress() function in viewWillAppear.
